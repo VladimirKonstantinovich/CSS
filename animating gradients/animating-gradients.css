@@ -1,0 +1,16 @@
+body{
+    overflow-x: hidden;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, hsl(234, 100%, 6%), hsl(234, 100%, 14%), hsl(234, 100%, 21%), hsl(234, 100%, 26%));
+    background-repeat: no-repeat;
+    background-size: 400%;
+    animation: animating-gradient 35s linear infinite alternate;
+    
+}
+
+@keyframes animating-gradient {
+  100%{
+      background-size: 100%;
+  }
+}

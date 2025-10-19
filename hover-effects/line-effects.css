@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
+a{
+	font-size: 2rem;
+	color: #A90CCB;
+	margin-top: 5em;
+	margin-left: 5em;
+	display: inline-block;
+	text-decoration: none;
+	position: relative;
+}
+
+a::before{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 0.1em;
+	background: gold;
+	transform: scaleX(0);
+}
+
+.link-1::before{
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform 250ms;
+
+}
+
+.link-1:hover::before{
+	transform-origin: left;
+	transform: scaleX(1);
+	transition: transform 250ms;
+}
+
+.link-2::before{
+	transform-origin: left;
+	transform: scaleX(0);
+	transition: transform 250ms;
+}
+
+.link-2:hover::before{
+	transform-origin: right;
+	transform: scaleX(1.0);
+	transition: transform 250ms;
+}
+

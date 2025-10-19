@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Raleway:wght@200;400&family=Zen+Antique+Soft&display=swap');
+
+body{
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+ul{
+	margin-right: 8rem;
+	margin-bottom: 8rem;
+}
+
+ul li{
+	font-family: 'Zen Antique Soft', serif;
+	font-size: 1.1rem;
+	padding-left: 0.5rem;
+	font-weight: 600;
+}
+
+::marker{
+	content: "hello";
+	font-family: 'Raleway', sans-serif;
+	color: blueviolet;
+	font-weight: 600;
+}

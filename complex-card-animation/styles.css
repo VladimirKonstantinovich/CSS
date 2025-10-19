@@ -1,0 +1,104 @@
+:root{
+	--pink_color:  hotpink;
+}
+
+*,
+*::after,
+*::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	display:  grid;
+	min-height: 100vh;
+	place-items:  center;
+	background-color: rgba(4, 2, 47, 1);
+	font-family: sans-serif;
+	line-height: 1.6;
+}
+
+.card{
+	position: relative;
+	color: white;
+	background-image: url(panther.jpg);
+	background-size: cover;
+	padding: 12rem 0 0 ;
+	width: 18rem;
+	border-radius:  0.5rem;
+}
+
+.card_body{
+	max-width: 25ch;
+	padding-left: 1rem;
+	color: var(--pink_color);
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+.card_button{
+	border-radius: 0.2rem;
+	display: inline-block;
+	text-decoration:  none;
+	background: limegreen;
+	color: darkblue;
+	padding: 5px;
+	margin: 15px;
+
+}
+
+.card_title{
+	color: var(--pink_color);
+	text-align:  center;
+	padding-bottom: 2rem;
+	position:  relative;
+}
+
+.card_title::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 1.8rem;
+	height: 0.25rem;
+	width: 65%;
+	background-color: limegreen;
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 250ms;
+}
+
+.card:hover .card_title::after{
+	transform-origin: left;
+	transform:  scaleX(0);
+	transition: transform 250ms ease-out;
+}
+
+.card:hover .card_body{
+	transition: opacity 250ms;
+	opacity: 0;
+}
+
+.card .card_button{
+	transition: transform 250ms;
+}
+
+.card:hover .card_button{
+	transition: transform 500ms;
+	transform: translate(5rem, -80px);
+}
+
+.extra_info{
+	position: absolute;
+	bottom: 0.8rem;
+	right: 7rem;
+	font-family: sans-serif;
+	color:  var(--pink_color);
+	transition: opacity 150ms;
+	opacity: 0;
+}
+
+.card:hover .extra_info{
+	transition: opacity 500ms;
+	opacity: 1;
+}

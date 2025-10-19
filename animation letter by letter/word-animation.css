@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+
+.letter-animation{
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    color: white;
+}
+
+span{
+     transition: color 1s ease;
+}
+
+span.animation{
+   color: rgb(91, 91, 241);
+}

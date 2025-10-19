@@ -1,0 +1,68 @@
+body{
+	margin: 0;
+	background-color:  #111;
+}
+
+.line{
+	height: 2px;
+	background-color: #6C6262;
+	margin-top: 20px;
+}
+
+.lights-wrapper{
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+}
+
+span{
+	display: inline-block;
+	width: 0.9rem;
+	height: 1.8rem;
+	border-radius: 50%;
+	background-color: #D0EA24;
+	z-index: 10;
+	animation: odd 1s linear infinite;
+	position: relative;
+}
+
+span:nth-child(even){
+	animation: even 1s linear infinite;
+}
+
+@keyframes odd{
+	0%, 100%{
+		background-color: rgba(255, 230, 65, 1);
+		box-shadow: 0 2px 20px 3px rgba(255, 230, 65, 1);
+	}
+
+	50%{
+		background-color: rgba(255, 230, 65, 0.5);
+		box-shadow: 0 2px 20px 3px rgba(255, 230, 65, 0.3);
+	}
+}
+
+@keyframes even{
+	50%{
+		background-color: rgba(255, 65, 185, 1);
+		box-shadow: 0 2px 20px 3px rgba(255, 65, 185, 1);
+	}
+
+	0%, 100%{
+		background-color: rgba(255, 65, 185, 0.5);
+		box-shadow: 0 2px 20px 3px rgba(255, 65, 185, 0.3);
+	}
+}
+
+span::before {
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 3px;
+	background-color: #7E7E7E;	
+	border-radius: 5px 5px 30% 30%;
+
+}
+
+
+
